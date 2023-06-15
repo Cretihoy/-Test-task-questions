@@ -1,5 +1,6 @@
 package com.example.testtaskquestions.gameScreen
 
+import com.example.testtaskquestions.BookModel
 import com.example.testtaskquestions.QuestionFactory
 import moxy.InjectViewState
 import moxy.MvpPresenter
@@ -13,6 +14,8 @@ class GamePresenter
 
     private val questions = questionFactory.getQuestionList()
     private var currentQuestionIndex = 0
+    private var correctAnswers = 0
+    private var wrongAnswers = 0
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
@@ -20,12 +23,27 @@ class GamePresenter
         showQuestion()
     }
 
-    fun onBookPressed() {
+    fun onBookPressed(bookIndex: Int) {
+        val pressedBook = questions[currentQuestionIndex].books[bookIndex]
+        calculateScore(pressedBook)
+        nextQuestionOrFinalScreen()
+    }
+
+    private fun calculateScore(selectedBook: BookModel) {
+        val currentQuestion = questions[currentQuestionIndex]
+        if (selectedBook == currentQuestion.correctBook) {
+            correctAnswers++
+        } else {
+            wrongAnswers++
+        }
+    }
+
+    private fun nextQuestionOrFinalScreen() {
         if (currentQuestionIndex < questions.lastIndex) {
             currentQuestionIndex++
             showQuestion()
         } else {
-            viewState.openFinalScreen()
+            viewState.openFinalScreen(correctAnswers, wrongAnswers)
         }
     }
 
