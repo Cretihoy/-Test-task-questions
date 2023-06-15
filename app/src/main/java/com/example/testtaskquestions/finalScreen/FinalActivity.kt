@@ -15,8 +15,8 @@ const val WRONG_ANSWERS_KEY = "WRONG_ANSWERS"
 @AndroidEntryPoint
 class FinalActivity : MvpAppCompatActivity(), FinalView {
 
-    private val correctAnswersText: TextView by lazy { findViewById(R.id.text_correct_activity_main) }
-    private val wrongAnswersText: TextView by lazy { findViewById(R.id.text_wrong_activity_main) }
+    private val correctAnswersText: TextView by lazy { findViewById(R.id.final_text_correct_answer) }
+    private val wrongAnswersText: TextView by lazy { findViewById(R.id.final_text_wrong_answer) }
     private val correctAnswers by lazy { intent.getIntExtra(CORRECT_ANSWERS_KEY, 0) }
     private val wrongAnswers by lazy { intent.getIntExtra(WRONG_ANSWERS_KEY, 0) }
 

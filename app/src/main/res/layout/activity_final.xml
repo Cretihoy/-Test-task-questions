@@ -7,7 +7,7 @@
     tools:context=".finalScreen.FinalActivity">
 
     <ImageView
-        android:id="@+id/background_activity_final"
+        android:id="@+id/final_background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/book_activity_final"
+        android:id="@+id/final_image_book"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
@@ -27,22 +27,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/text_activity_main"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/oswald_medium"
-        android:text="quiz is over"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="@color/light_blue"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/background_activity_final" />
-
-    <TextView
-        android:id="@+id/text_correct_activity_main"
+        android:id="@+id/final_text_correct_answer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/oswald_medium"
@@ -51,13 +36,13 @@
         android:textAllCaps="true"
         android:textColor="@color/light_blue"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@id/text_wrong_activity_main"
+        app:layout_constraintBottom_toTopOf="@id/final_text_wrong_answer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/background_activity_final" />
+        app:layout_constraintTop_toBottomOf="@id/final_background" />
 
     <TextView
-        android:id="@+id/text_wrong_activity_main"
+        android:id="@+id/final_text_wrong_answer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/oswald_medium"
@@ -66,9 +51,24 @@
         android:textAllCaps="true"
         android:textColor="@color/light_blue"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@id/text_activity_main"
+        app:layout_constraintBottom_toTopOf="@id/final_text_quiz_is_over"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_correct_activity_main" />
+        app:layout_constraintTop_toBottomOf="@id/final_text_correct_answer" />
+
+    <TextView
+        android:id="@+id/final_text_quiz_is_over"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/oswald_medium"
+        android:text="@string/quiz_is_over"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/light_blue"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/final_background" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

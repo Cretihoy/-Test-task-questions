@@ -14,7 +14,7 @@ import javax.inject.Provider
 @AndroidEntryPoint
 class MainActivity : MvpAppCompatActivity(), MainView {
 
-    private val buttonPlay: Button by lazy { findViewById(R.id.button_activity_main) }
+    private val buttonPlay: Button by lazy { findViewById(R.id.main_button_play) }
 
     @Inject
     lateinit var presenterProvider: Provider<MainPresenter>
@@ -22,7 +22,7 @@ class MainActivity : MvpAppCompatActivity(), MainView {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_menu)
 
         buttonPlay.setOnClickListener {
             presenter.onButtonClicked()

@@ -18,10 +18,10 @@ import javax.inject.Provider
 @AndroidEntryPoint
 class GameActivity : MvpAppCompatActivity(), GameView {
 
-    private val questionText: TextView by lazy { findViewById(R.id.text_activity_game) }
-    private val firstBookImage: ImageView by lazy { findViewById(R.id.book_1_activity_game) }
-    private val secondBookImage: ImageView by lazy { findViewById(R.id.book_2_activity_game) }
-    private val thirdBookImage: ImageView by lazy { findViewById(R.id.book_3_activity_game) }
+    private val questionText: TextView by lazy { findViewById(R.id.game_text_quiz) }
+    private val firstBookImage: ImageView by lazy { findViewById(R.id.game_image_first_book) }
+    private val secondBookImage: ImageView by lazy { findViewById(R.id.game_image_second_book) }
+    private val thirdBookImage: ImageView by lazy { findViewById(R.id.game_image_third_book) }
 
     @Inject
     lateinit var presenterProvider: Provider<GamePresenter>

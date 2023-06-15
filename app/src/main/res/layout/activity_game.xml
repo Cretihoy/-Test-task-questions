@@ -7,7 +7,7 @@
     tools:context=".gameScreen.GameActivity">
 
     <ImageView
-        android:id="@+id/background_activity_game"
+        android:id="@+id/game_background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/book_activity_game"
+        android:id="@+id/game_image_book"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/text_activity_game"
+        android:id="@+id/game_text_quiz"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_bold"
@@ -36,7 +36,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/background_activity_game"
+        app:layout_constraintTop_toBottomOf="@id/game_background"
         tools:text="Мистер и миссис Дурсль проживали в доме номер четыре по Тисовой улице и всегда с гордостью заявляли, что они, слава богу, абсолютно нормальные люди." />
 
     <LinearLayout
@@ -46,7 +46,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_activity_game">
+        app:layout_constraintTop_toBottomOf="@id/game_text_quiz">
 
         <ImageView
             android:id="@+id/book_1_activity_game"
@@ -56,7 +56,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/book_2_activity_game"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_activity_game"
+            app:layout_constraintTop_toBottomOf="@id/game_text_quiz"
             tools:src="@drawable/book_1" />
 
         <ImageView
@@ -67,7 +67,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/book_3_activity_game"
             app:layout_constraintStart_toEndOf="@id/book_1_activity_game"
-            app:layout_constraintTop_toBottomOf="@id/text_activity_game"
+            app:layout_constraintTop_toBottomOf="@id/game_text_quiz"
             tools:src="@drawable/book_2" />
 
         <ImageView
@@ -78,7 +78,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/book_2_activity_game"
-            app:layout_constraintTop_toBottomOf="@id/text_activity_game"
+            app:layout_constraintTop_toBottomOf="@id/game_text_quiz"
             tools:src="@drawable/book_3" />
 
     </LinearLayout>
