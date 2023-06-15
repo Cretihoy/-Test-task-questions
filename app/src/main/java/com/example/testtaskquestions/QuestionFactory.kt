@@ -16,10 +16,11 @@ class QuestionFactory
     private fun makeQuestion(book: BookModel): QuestionModel {
         val firstIncorrectBook = getRandomBook(book)
         val secondIncorrectBook = getRandomBook(book, firstIncorrectBook)
+        val books = mutableListOf(book, firstIncorrectBook, secondIncorrectBook)
+        books.shuffle()
         return QuestionModel(
             correctBook = book,
-            firstIncorrectBook = firstIncorrectBook,
-            secondIncorrectBook = secondIncorrectBook
+            books = books
         )
     }
 
