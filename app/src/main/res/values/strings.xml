@@ -10,4 +10,6 @@
     <string name="dark_tower">Преподобный Дон Каллагэн когда-то был католическим священником в городке Салемс-Лот, более не отмеченном ни на одной карте. </string>
     <string name="walking_castle">В стране Ингарии, где взаправду существуют диковины вроде семимильных сапог и шапок-невидимок, родиться старшим из троих детей – изрядное невезение. </string>
     <string name="the_chronicles_of_narnia">Повесть эта о том, что случилось, когда твой дедушка был еще маленьким. </string>
+    <string name="correct_answers">Correct answers: %1$d</string>
+    <string name="wrong_answers">Wrong answers: %1$d</string>
 </resources>
