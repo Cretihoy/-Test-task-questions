@@ -27,6 +27,15 @@ class GameActivity : MvpAppCompatActivity(), GameView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
 
+        firstBookImage.setOnClickListener {
+            presenter.onBookPressed()
+        }
+        secondBookImage.setOnClickListener {
+            presenter.onBookPressed()
+        }
+        thirdBookImage.setOnClickListener {
+            presenter.onBookPressed()
+        }
     }
 
     override fun showQuestion(question: QuestionModel) {
