@@ -1,6 +1,9 @@
 package com.example.testtaskquestions
 
-class BookFactory {
+import javax.inject.Inject
+
+class BookFactory
+@Inject constructor() {
     fun getBookList(): List<BookModel> {
         return listOf(
             BookModel(R.drawable.book_1, R.string.harry_potter),
