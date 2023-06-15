@@ -12,7 +12,7 @@ class GamePresenter
 ) : MvpPresenter<GameView>() {
 
     private val questions = questionFactory.getQuestionList()
-    var currentQuestionIndex = 0
+    private var currentQuestionIndex = 0
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
@@ -25,7 +25,7 @@ class GamePresenter
             currentQuestionIndex++
             showQuestion()
         } else {
-            viewState.showFinalScreen()
+            viewState.openFinalScreen()
         }
     }
 

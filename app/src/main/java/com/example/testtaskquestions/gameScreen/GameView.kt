@@ -12,5 +12,5 @@ interface GameView : MvpView {
     fun showQuestion(question: QuestionModel)
 
     @StateStrategyType(SkipStrategy::class)
-    fun showFinalScreen()
+    fun openFinalScreen()
 }

@@ -1,10 +1,12 @@
 package com.example.testtaskquestions.gameScreen
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.testtaskquestions.QuestionModel
 import com.example.testtaskquestions.R
+import com.example.testtaskquestions.finalScreen.FinalActivity
 import dagger.hilt.android.AndroidEntryPoint
 import moxy.MvpAppCompatActivity
 import moxy.ktx.moxyPresenter
@@ -45,7 +47,8 @@ class GameActivity : MvpAppCompatActivity(), GameView {
         thirdBookImage.setImageResource(question.books[2].image)
     }
 
-    override fun showFinalScreen() {
-        // TODO: Add final screen intent here
+    override fun openFinalScreen() {
+        val intent = Intent(this, FinalActivity::class.java)
+        startActivity(intent)
     }
 }
