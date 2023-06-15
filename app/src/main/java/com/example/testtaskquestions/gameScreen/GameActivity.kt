@@ -3,6 +3,7 @@ package com.example.testtaskquestions.gameScreen
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.testtaskquestions.QuestionModel
 import com.example.testtaskquestions.R
 import dagger.hilt.android.AndroidEntryPoint
 import moxy.MvpAppCompatActivity
@@ -13,10 +14,10 @@ import javax.inject.Provider
 @AndroidEntryPoint
 class GameActivity : MvpAppCompatActivity(), GameView {
 
-    val questionText: TextView by lazy { findViewById(R.id.text_activity_game) }
-    val firstBookImage: ImageView by lazy { findViewById(R.id.book_1_activity_game) }
-    val secondBookImage: ImageView by lazy { findViewById(R.id.book_2_activity_game) }
-    val thirdBookImage: ImageView by lazy { findViewById(R.id.book_3_activity_game) }
+    private val questionText: TextView by lazy { findViewById(R.id.text_activity_game) }
+    private val firstBookImage: ImageView by lazy { findViewById(R.id.book_1_activity_game) }
+    private val secondBookImage: ImageView by lazy { findViewById(R.id.book_2_activity_game) }
+    private val thirdBookImage: ImageView by lazy { findViewById(R.id.book_3_activity_game) }
 
     @Inject
     lateinit var presenterProvider: Provider<GamePresenter>
@@ -25,5 +26,17 @@ class GameActivity : MvpAppCompatActivity(), GameView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
+
+    }
+
+    override fun showQuestion(question: QuestionModel) {
+        questionText.text = getString(question.correctBook.stroke)
+        firstBookImage.setImageResource(question.books[0].image)
+        secondBookImage.setImageResource(question.books[1].image)
+        thirdBookImage.setImageResource(question.books[2].image)
+    }
+
+    override fun showFinalScreen() {
+        // TODO: Add final screen intent here
     }
 }
