@@ -33,7 +33,7 @@
         android:fontFamily="@font/roboto_bold"
         android:textAlignment="center"
         android:textColor="@color/light_blue"
-        android:textSize="20sp"
+        android:textSize="@dimen/small_text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/game_background"
@@ -80,6 +80,5 @@
             app:layout_constraintStart_toEndOf="@id/game_image_second_book"
             app:layout_constraintTop_toBottomOf="@id/game_text_quiz"
             tools:src="@drawable/book_3" />
-
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
