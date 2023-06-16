@@ -14,7 +14,7 @@ import javax.inject.Provider
 @AndroidEntryPoint
 class MenuActivity : MvpAppCompatActivity(), MenuView {
 
-    private val buttonPlay: Button by lazy { findViewById(R.id.main_button_play) }
+    private val buttonPlay: Button by lazy { findViewById(R.id.menu_button_play) }
 
     @Inject
     lateinit var presenterProvider: Provider<MenuPresenter>

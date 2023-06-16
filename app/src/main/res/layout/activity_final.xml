@@ -16,14 +16,12 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/final_background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:src="@drawable/background" />
 
             <ImageView
-                android:id="@+id/final_image_book"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
@@ -34,14 +32,15 @@
             android:id="@+id/final_text_quiz_is_over"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_large"
             android:layout_marginHorizontal="@dimen/spacing_large"
+            android:layout_marginTop="@dimen/spacing_large"
             android:fontFamily="@font/oswald_medium"
             android:text="@string/quiz_is_over"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@color/light_blue"
-            android:textSize="@dimen/big_text_size" />
+            android:textSize="@dimen/big_text_size"
+            tools:fontFamily="@null" />
 
         <TextView
             android:id="@+id/final_text_correct_answer"
@@ -53,26 +52,28 @@
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@color/light_blue"
-            android:textSize="@dimen/medium_text_size" />
+            android:textSize="@dimen/medium_text_size"
+            tools:fontFamily="@null" />
 
         <TextView
-            android:layout_marginHorizontal="@dimen/spacing_large"
             android:id="@+id/final_text_wrong_answer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_large"
             android:fontFamily="@font/oswald_medium"
             android:text="@string/wrong_answers"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@color/light_blue"
-            android:textSize="@dimen/medium_text_size" />
+            android:textSize="@dimen/medium_text_size"
+            tools:fontFamily="@null" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_marginTop="@dimen/spacing_medium"
-            android:layout_marginHorizontal="@dimen/spacing_large"
             android:id="@+id/final_recycler"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_large"
+            android:layout_marginTop="@dimen/spacing_medium"
             android:nestedScrollingEnabled="false"
             android:scrollbars="vertical"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

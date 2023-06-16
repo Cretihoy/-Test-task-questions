@@ -4,46 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".presentation.menuScreen.MenuActivity">
 
     <ImageView
-        android:id="@+id/main_background"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/menu_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/spacing_medium"
         android:adjustViewBounds="true"
+        android:scaleType="fitXY"
         android:src="@drawable/background"
+        app:layout_constraintBottom_toTopOf="@id/menu_text_info"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/main_image_book"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:src="@drawable/books"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
 
     <TextView
-        android:id="@+id/main_text_info"
+        android:id="@+id/menu_text_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_large"
+        android:layout_marginBottom="@dimen/spacing_medium"
         android:fontFamily="@font/oswald_medium"
         android:text="@string/info"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@color/light_blue"
         android:textSize="@dimen/big_text_size"
-        app:layout_constraintBottom_toTopOf="@+id/main_button_play"
+        app:layout_constraintBottom_toTopOf="@id/menu_button_play"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/main_background" />
+        tools:fontFamily="@null" />
 
     <Button
-        android:id="@+id/main_button_play"
-        android:layout_width="match_parent"
+        android:id="@+id/menu_button_play"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/spacing_large"
         android:layout_marginEnd="@dimen/spacing_large"
@@ -51,10 +57,9 @@
         android:background="@drawable/rectangle"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/play"
-        app:backgroundTint="@null"
+        app:backgroundTint="@color/light_red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/main_text_info" />
-
+        tools:fontFamily="@null" />
 </androidx.constraintlayout.widget.ConstraintLayout>
