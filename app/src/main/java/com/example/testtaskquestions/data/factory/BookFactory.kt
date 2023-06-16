@@ -6,8 +6,9 @@ import javax.inject.Inject
 
 class BookFactory
 @Inject constructor() {
-    fun getBookList(): MutableList<BookModel> {
-        val books = mutableListOf(
+
+    fun getBookList(): List<BookModel> {
+        return mutableListOf(
             BookModel(R.drawable.book_1, R.string.harry_potter),
             BookModel(R.drawable.book_2, R.string.alice_adventure),
             BookModel(R.drawable.book_3, R.string.gulliver_travels),
@@ -18,8 +19,6 @@ class BookFactory
             BookModel(R.drawable.book_8, R.string.dark_tower),
             BookModel(R.drawable.book_9, R.string.walking_castle),
             BookModel(R.drawable.book_10, R.string.the_chronicles_of_narnia),
-        )
-        books.shuffle()
-        return books
+        ).apply { shuffle() }
     }
 }
