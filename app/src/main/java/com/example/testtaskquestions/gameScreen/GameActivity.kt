@@ -6,9 +6,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.example.testtaskquestions.QuestionModel
 import com.example.testtaskquestions.R
-import com.example.testtaskquestions.finalScreen.CORRECT_ANSWERS_KEY
-import com.example.testtaskquestions.finalScreen.FinalActivity
-import com.example.testtaskquestions.finalScreen.WRONG_ANSWERS_KEY
+import com.example.testtaskquestions.finalScreen.mvp.CORRECT_ANSWERS_KEY
+import com.example.testtaskquestions.finalScreen.mvp.FinalActivity
+import com.example.testtaskquestions.finalScreen.mvp.WRONG_ANSWERS_KEY
 import dagger.hilt.android.AndroidEntryPoint
 import moxy.MvpAppCompatActivity
 import moxy.ktx.moxyPresenter
