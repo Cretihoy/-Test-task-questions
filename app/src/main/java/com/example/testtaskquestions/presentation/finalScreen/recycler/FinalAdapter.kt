@@ -4,8 +4,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.testtaskquestions.data.model.AnswerModel
 import com.example.testtaskquestions.R
+import com.example.testtaskquestions.data.model.AnswerModel
 
 class FinalAdapter(
     private val context: Context
@@ -27,8 +27,9 @@ class FinalAdapter(
     override fun onBindViewHolder(holder: FinalViewHolder, position: Int) {
         val answer = items[position]
         holder.run {
+            val imageResId = R.drawable.ic_check.takeIf { answer.isCorrect } ?: R.drawable.ic_error
             questionText.text = context.getString(answer.quote)
-            isCorrect.text = "+".takeIf { answer.isCorrect } ?: "-"
+            isCorrect.setImageResource(imageResId)
             bookImage.setImageResource(answer.image)
         }
     }
