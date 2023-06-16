@@ -1,37 +1,17 @@
 package com.example.testtaskquestions.data.factory
 
-import com.example.testtaskquestions.data.model.BookModel
+import com.example.testtaskquestions.data.mapper.QuestionMapper
 import com.example.testtaskquestions.data.model.QuestionModel
 import javax.inject.Inject
 
 class QuestionFactory
 @Inject constructor(
-    private val bookFactory: BookFactory
+    private val bookFactory: BookFactory,
+    private val questionMapper: QuestionMapper,
 ) {
+
     fun getQuestionList(): List<QuestionModel> {
         val books = bookFactory.getBookList()
-        return books.map {
-            makeQuestion(it)
-        }
-    }
-
-    private fun makeQuestion(book: BookModel): QuestionModel {
-        val firstIncorrectBook = getRandomBook(book)
-        val secondIncorrectBook = getRandomBook(book, firstIncorrectBook)
-        val books = mutableListOf(book, firstIncorrectBook, secondIncorrectBook)
-        books.shuffle()
-        return QuestionModel(
-            correctBook = book,
-            books = books
-        )
-    }
-
-    private fun getRandomBook(
-        firstBook: BookModel,
-        secondBook: BookModel? = null,
-    ): BookModel {
-        val books = bookFactory.getBookList()
-        val filteredBooks = books.filter { it != firstBook && it != secondBook }
-        return filteredBooks.random()
+        return questionMapper.map(books)
     }
 }
