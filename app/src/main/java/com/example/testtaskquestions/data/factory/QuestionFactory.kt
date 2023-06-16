@@ -1,5 +1,7 @@
-package com.example.testtaskquestions
+package com.example.testtaskquestions.data.factory
 
+import com.example.testtaskquestions.data.model.BookModel
+import com.example.testtaskquestions.data.model.QuestionModel
 import javax.inject.Inject
 
 class QuestionFactory

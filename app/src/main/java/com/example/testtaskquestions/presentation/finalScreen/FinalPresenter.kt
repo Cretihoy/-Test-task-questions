@@ -1,4 +1,4 @@
-package com.example.testtaskquestions.finalScreen.mvp
+package com.example.testtaskquestions.presentation.finalScreen
 
 import moxy.InjectViewState
 import moxy.MvpPresenter

@@ -16,10 +16,10 @@
             android:name=".finalScreen.FinalActivity"
             android:exported="false" />
         <activity
-            android:name=".gameScreen.GameActivity"
+            android:name=".presentation.gameScreen.GameActivity"
             android:exported="false" />
         <activity
-            android:name=".mainScreen.MainActivity"
+            android:name=".presentation.mainScreen.MenuActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

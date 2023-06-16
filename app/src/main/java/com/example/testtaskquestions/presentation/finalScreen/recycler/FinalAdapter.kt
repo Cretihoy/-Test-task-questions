@@ -1,10 +1,10 @@
-package com.example.testtaskquestions.finalScreen.recycler
+package com.example.testtaskquestions.presentation.finalScreen.recycler
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.testtaskquestions.AnswerModel
+import com.example.testtaskquestions.data.model.AnswerModel
 import com.example.testtaskquestions.R
 
 class FinalAdapter(

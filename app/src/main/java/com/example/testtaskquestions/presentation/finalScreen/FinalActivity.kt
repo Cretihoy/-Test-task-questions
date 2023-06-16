@@ -1,11 +1,11 @@
-package com.example.testtaskquestions.finalScreen.mvp
+package com.example.testtaskquestions.presentation.finalScreen
 
 import android.os.Bundle
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.testtaskquestions.AnswerModel
+import com.example.testtaskquestions.data.model.AnswerModel
 import com.example.testtaskquestions.R
-import com.example.testtaskquestions.finalScreen.recycler.FinalAdapter
+import com.example.testtaskquestions.presentation.finalScreen.recycler.FinalAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import moxy.MvpAppCompatActivity
 import moxy.ktx.moxyPresenter

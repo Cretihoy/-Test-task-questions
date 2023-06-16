@@ -1,6 +1,6 @@
-package com.example.testtaskquestions.finalScreen.mvp
+package com.example.testtaskquestions.presentation.finalScreen
 
-import com.example.testtaskquestions.AnswerModel
+import com.example.testtaskquestions.data.model.AnswerModel
 import moxy.MvpView
 import moxy.viewstate.strategy.AddToEndSingleStrategy
 import moxy.viewstate.strategy.StateStrategyType

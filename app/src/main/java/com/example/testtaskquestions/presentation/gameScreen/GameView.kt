@@ -1,6 +1,6 @@
-package com.example.testtaskquestions.gameScreen
+package com.example.testtaskquestions.presentation.gameScreen
 
-import com.example.testtaskquestions.QuestionModel
+import com.example.testtaskquestions.data.model.QuestionModel
 import moxy.MvpView
 import moxy.viewstate.strategy.AddToEndSingleStrategy
 import moxy.viewstate.strategy.SkipStrategy

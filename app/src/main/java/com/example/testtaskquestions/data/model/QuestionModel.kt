@@ -1,4 +1,4 @@
-package com.example.testtaskquestions
+package com.example.testtaskquestions.data.model
 
 data class QuestionModel(
     val correctBook: BookModel,

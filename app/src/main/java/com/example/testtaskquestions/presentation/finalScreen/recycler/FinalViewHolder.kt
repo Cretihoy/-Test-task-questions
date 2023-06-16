@@ -1,4 +1,4 @@
-package com.example.testtaskquestions.finalScreen.recycler
+package com.example.testtaskquestions.presentation.finalScreen.recycler
 
 import android.view.View
 import android.widget.ImageView

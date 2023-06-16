@@ -1,14 +1,14 @@
-package com.example.testtaskquestions.gameScreen
+package com.example.testtaskquestions.presentation.gameScreen
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
-import com.example.testtaskquestions.QuestionModel
+import com.example.testtaskquestions.data.model.QuestionModel
 import com.example.testtaskquestions.R
-import com.example.testtaskquestions.finalScreen.mvp.CORRECT_ANSWERS_KEY
-import com.example.testtaskquestions.finalScreen.mvp.FinalActivity
-import com.example.testtaskquestions.finalScreen.mvp.WRONG_ANSWERS_KEY
+import com.example.testtaskquestions.presentation.finalScreen.CORRECT_ANSWERS_KEY
+import com.example.testtaskquestions.presentation.finalScreen.FinalActivity
+import com.example.testtaskquestions.presentation.finalScreen.WRONG_ANSWERS_KEY
 import dagger.hilt.android.AndroidEntryPoint
 import moxy.MvpAppCompatActivity
 import moxy.ktx.moxyPresenter

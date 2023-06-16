@@ -1,7 +1,7 @@
-package com.example.testtaskquestions.gameScreen
+package com.example.testtaskquestions.presentation.gameScreen
 
-import com.example.testtaskquestions.BookModel
-import com.example.testtaskquestions.QuestionFactory
+import com.example.testtaskquestions.data.model.BookModel
+import com.example.testtaskquestions.data.factory.QuestionFactory
 import moxy.InjectViewState
 import moxy.MvpPresenter
 import javax.inject.Inject
