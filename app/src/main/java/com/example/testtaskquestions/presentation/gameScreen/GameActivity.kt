@@ -4,8 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
-import com.example.testtaskquestions.data.model.QuestionModel
 import com.example.testtaskquestions.R
+import com.example.testtaskquestions.data.model.QuestionModel
 import com.example.testtaskquestions.presentation.finalScreen.CORRECT_ANSWERS_KEY
 import com.example.testtaskquestions.presentation.finalScreen.FinalActivity
 import com.example.testtaskquestions.presentation.finalScreen.WRONG_ANSWERS_KEY
@@ -31,6 +31,10 @@ class GameActivity : MvpAppCompatActivity(), GameView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
 
+        initClicks()
+    }
+
+    private fun initClicks() {
         firstBookImage.setOnClickListener {
             presenter.onBookPressed(0)
         }
