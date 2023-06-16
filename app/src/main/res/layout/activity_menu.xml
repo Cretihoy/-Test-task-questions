@@ -51,7 +51,6 @@
         android:background="@drawable/rectangle"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/play"
-        android:textSize="@dimen/small_text_size"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
