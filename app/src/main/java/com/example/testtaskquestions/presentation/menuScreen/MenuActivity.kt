@@ -1,4 +1,4 @@
-package com.example.testtaskquestions.presentation.mainScreen
+package com.example.testtaskquestions.presentation.menuScreen
 
 import android.content.Intent
 import android.os.Bundle
