@@ -22,9 +22,10 @@
 
     <ImageView
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:adjustViewBounds="true"
         android:src="@drawable/books"
+        app:layout_constraintBottom_toTopOf="@id/menu_text_info"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -57,6 +58,7 @@
         android:background="@drawable/rectangle"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/play"
+        android:textSize="@dimen/small_text_size"
         app:backgroundTint="@color/light_red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

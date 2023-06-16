@@ -33,7 +33,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/spacing_large"
-            android:layout_marginTop="@dimen/spacing_large"
             android:fontFamily="@font/oswald_medium"
             android:text="@string/quiz_is_over"
             android:textAlignment="center"
