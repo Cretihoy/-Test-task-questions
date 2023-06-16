@@ -54,5 +54,6 @@ class GameActivity : MvpAppCompatActivity(), GameView {
     override fun openFinalScreen(correctAnswers: Int, wrongAnswers: Int) {
         val intent = Intent(this, FinalActivity::class.java)
         startActivity(intent)
+        finish()
     }
 }
