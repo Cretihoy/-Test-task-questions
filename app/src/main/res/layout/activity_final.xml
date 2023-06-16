@@ -62,11 +62,7 @@
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@color/light_blue"
-            android:textSize="@dimen/medium_text_size"
-            app:layout_constraintBottom_toTopOf="@id/final_recycler"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/final_text_correct_answer" />
+            android:textSize="@dimen/medium_text_size" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/final_recycler"
@@ -75,9 +71,6 @@
             android:nestedScrollingEnabled="false"
             android:scrollbars="vertical"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/final_text_wrong_answer"
             tools:listitem="@layout/item_question" />
 
     </LinearLayout>

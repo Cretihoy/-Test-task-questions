@@ -13,7 +13,6 @@
         android:fontFamily="@font/roboto_bold"
         android:textAlignment="center"
         android:textColor="@color/light_blue"
-        android:textSize="20sp"
         tools:text="@string/harry_potter" />
 
     <LinearLayout
