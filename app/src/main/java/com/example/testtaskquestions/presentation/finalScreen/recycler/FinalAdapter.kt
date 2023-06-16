@@ -27,7 +27,7 @@ class FinalAdapter(
     override fun onBindViewHolder(holder: FinalViewHolder, position: Int) {
         val answer = items[position]
         holder.run {
-            questionText.text = context.getString(answer.question)
+            questionText.text = context.getString(answer.quote)
             isCorrect.text = "+".takeIf { answer.isCorrect } ?: "-"
             bookImage.setImageResource(answer.image)
         }

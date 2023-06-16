@@ -1,7 +1,8 @@
 package com.example.testtaskquestions.presentation.gameScreen
 
-import com.example.testtaskquestions.data.model.BookModel
 import com.example.testtaskquestions.data.factory.QuestionFactory
+import com.example.testtaskquestions.data.model.BookModel
+import com.example.testtaskquestions.data.repository.AnswersRepository
 import moxy.InjectViewState
 import moxy.MvpPresenter
 import javax.inject.Inject
@@ -9,13 +10,13 @@ import javax.inject.Inject
 @InjectViewState
 class GamePresenter
 @Inject constructor(
-    private val questionFactory: QuestionFactory
+    private val questionFactory: QuestionFactory,
+    private val answersRepository: AnswersRepository,
 ) : MvpPresenter<GameView>() {
 
     private val questions = questionFactory.getQuestionList()
     private var currentQuestionIndex = 0
-    private var correctAnswers = 0
-    private var wrongAnswers = 0
+
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
@@ -31,11 +32,7 @@ class GamePresenter
 
     private fun calculateScore(selectedBook: BookModel) {
         val currentQuestion = questions[currentQuestionIndex]
-        if (selectedBook == currentQuestion.correctBook) {
-            correctAnswers++
-        } else {
-            wrongAnswers++
-        }
+        answersRepository.addAnswer(selectedBook, currentQuestion)
     }
 
     private fun nextQuestionOrFinalScreen() {
@@ -43,7 +40,10 @@ class GamePresenter
             currentQuestionIndex++
             showQuestion()
         } else {
-            viewState.openFinalScreen(correctAnswers, wrongAnswers)
+            viewState.openFinalScreen(
+                answersRepository.getCorrectAnswersCount(),
+                answersRepository.getWrongAnswersCount(),
+            )
         }
     }
 

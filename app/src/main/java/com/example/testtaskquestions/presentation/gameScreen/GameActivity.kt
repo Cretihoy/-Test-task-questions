@@ -47,7 +47,7 @@ class GameActivity : MvpAppCompatActivity(), GameView {
     }
 
     override fun showQuestion(question: QuestionModel) {
-        questionText.text = getString(question.correctBook.stroke)
+        questionText.text = getString(question.correctBook.quote)
         firstBookImage.setImageResource(question.books[0].image)
         secondBookImage.setImageResource(question.books[1].image)
         thirdBookImage.setImageResource(question.books[2].image)
