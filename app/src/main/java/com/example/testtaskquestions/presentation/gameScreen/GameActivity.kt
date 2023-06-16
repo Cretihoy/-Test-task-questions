@@ -6,9 +6,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.example.testtaskquestions.R
 import com.example.testtaskquestions.data.model.QuestionModel
-import com.example.testtaskquestions.presentation.finalScreen.CORRECT_ANSWERS_KEY
 import com.example.testtaskquestions.presentation.finalScreen.FinalActivity
-import com.example.testtaskquestions.presentation.finalScreen.WRONG_ANSWERS_KEY
 import dagger.hilt.android.AndroidEntryPoint
 import moxy.MvpAppCompatActivity
 import moxy.ktx.moxyPresenter
@@ -55,8 +53,6 @@ class GameActivity : MvpAppCompatActivity(), GameView {
 
     override fun openFinalScreen(correctAnswers: Int, wrongAnswers: Int) {
         val intent = Intent(this, FinalActivity::class.java)
-        intent.putExtra(CORRECT_ANSWERS_KEY, correctAnswers)
-        intent.putExtra(WRONG_ANSWERS_KEY, wrongAnswers)
         startActivity(intent)
     }
 }

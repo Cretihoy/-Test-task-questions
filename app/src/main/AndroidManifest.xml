@@ -13,7 +13,7 @@
         android:theme="@style/Theme.TestTaskQuestions"
         tools:targetApi="31">
         <activity
-            android:name=".finalScreen.FinalActivity"
+            android:name=".presentation.finalScreen.FinalActivity"
             android:exported="false" />
         <activity
             android:name=".presentation.gameScreen.GameActivity"

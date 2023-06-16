@@ -28,4 +28,8 @@ class AnswersRepository
     fun getWrongAnswersCount(): Int {
         return answersList.filter { !it.isCorrect }.size
     }
+
+    fun getAnswers(): List<AnswerModel> {
+        return answersList
+    }
 }
