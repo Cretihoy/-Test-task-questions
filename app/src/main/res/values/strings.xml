@@ -2,6 +2,7 @@
     <string name="app_name">Test task questions</string>
     <string name="info">Match the cover of the book with its first line</string>
     <string name="play">Play</string>
+    <string name="play_again">Play again</string>
     <string name="quiz_is_over">Quiz is over</string>
     <string name="harry_potter">Мистер и миссис Дурсль проживали в доме номер четыре по Тисовой улице и всегда с гордостью заявляли, что они, слава богу, абсолютно нормальные люди.</string>
     <string name="alice_adventure">Алиса начала очень скучать: она сидела рядом с сестрой на берегу и ничего не делала.</string>

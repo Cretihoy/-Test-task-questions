@@ -19,4 +19,8 @@ class FinalPresenter
         val answers = answersRepository.getAnswers()
         viewState.showAnswers(correctAnswers, wrongAnswers, answers)
     }
+
+    fun onRestartClicked() {
+        viewState.openNewGameScreen()
+    }
 }

@@ -77,5 +77,19 @@
             android:scrollbars="vertical"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/item_question" />
+
+        <Button
+            android:id="@+id/final_button_play"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:layout_marginEnd="@dimen/spacing_large"
+            android:layout_marginBottom="@dimen/spacing_large"
+            android:background="@drawable/rectangle"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/play_again"
+            android:textSize="@dimen/small_text_size"
+            app:backgroundTint="@color/light_red"
+            tools:fontFamily="@null" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
